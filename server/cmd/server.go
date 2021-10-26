@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/davecgh/go-spew/spew"
 	"github.com/robertkrimen/otto"
 	"github.com/robfig/cron/v3"
 	"github.com/spf13/cobra"
@@ -85,7 +86,11 @@ func getScriptData() (string, error) {
 
 	s := doc.Find("script")
 
-	script := s.Nodes[2].FirstChild.Data
+	spew.Dump(len(s.Nodes))
+
+	script := s.Nodes[4].FirstChild.Data
+
+	spew.Dump(script)
 
 	return script, nil
 }
