@@ -8,7 +8,7 @@ var testCmd = &cobra.Command{
 	Short: "test process cmd",
 	Run: func(cmd *cobra.Command, args []string) {
 		reptile()
-		autoCommit()
+		//autoCommit()
 	},
 }
 
